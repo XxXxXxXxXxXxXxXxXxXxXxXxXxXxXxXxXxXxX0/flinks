@@ -39,7 +39,7 @@ categories:
         logo: https://gh-proxy.com/favicon.ico
         url: https://gh-proxy.com/
         description: GitHub 文件加速代理服务，支持 Releases、Raw、Archive 等资源下载加速，解决 GitHub 文件访问慢的问题。
-        tags: GitHub代理, GitHub加速, GitHub镜像, GitHub下载加速, Releases下载加速, Raw加速, ghproxy, gh-proxy, GitHub proxy
+        tags: GitHub代理, GitHub加速
       - title: 等你来加➕
         logo: data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="0.9em" x="0.1em" font-size="90">G</text></svg>
         url: https://github.com/geneasy/links/issues
