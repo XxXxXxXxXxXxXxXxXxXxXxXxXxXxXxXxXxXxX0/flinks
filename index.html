@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://r2.gh-proxy.com/webstack-assets-main/css/xenon-components.css">
     <link rel="stylesheet" href="https://r2.gh-proxy.com/webstack-assets-main/css/xenon-skins.css">
     <link rel="stylesheet" href="https://r2.gh-proxy.com/webstack-assets-main/css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/waline/3.6.0/waline.css" integrity="sha512-JLD6eIuutGwOfrUZRrM5Ne5v5seS5y2mM2H1nnW5x1naistoo+DX/TNI1zRhnDic9TSNrgxKyakkN0BEVt9XiA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://r2.gh-proxy.com/webstack-assets-main/js/jquery-1.11.1.min.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -173,7 +174,7 @@
             </div>
             <br />
             <!--END 个人博客 -->
-
+            <div id="waline" data-path="/link"></div>
             <!-- Main Footer -->
             <!-- Choose between footer styles: "footer-type-1" or "footer-type-2" -->
             <!-- Add class "sticky" to  always stick the footer to the end of page (if page contents is small) -->
@@ -287,5 +288,73 @@
     <!-- JavaScripts initializations and stuff -->
     <script src="https://r2.gh-proxy.com/webstack-assets-main/js/xenon-custom.js"></script>
     <script src="https://r2.gh-proxy.com/webstack-assets-main/js/lozad.js"></script>
+    <script>
+    /**
+     * Waline 评论系统初始化
+     */
+    document.addEventListener('DOMContentLoaded', async function() {
+        const { init } = await import('https://cdnjs.cloudflare.com/ajax/libs/waline/3.6.0/waline.js');
+
+        // const path = window.location.pathname;
+
+        const waline = init({
+            el: "#waline",
+            serverURL: "https://waline.gh-proxy.com",
+            path: "/link", // 当前文章页路径，用于区分不同的文章页
+            dark: 'html[data-theme="dark"]',
+
+            // meta: ["nick"], // 评论者相关属性。
+            // requiredMeta: ['nick', 'mail'], // 设置必填项
+            // login: "disable", // 禁用登录，用户只能填写信息评论
+
+            pageSize: 5, // 评论列表分页，每页条数
+            copyright: true, // 是否显示页脚版权信息
+
+            // 文章表情互动功能
+            reaction: [
+                "https://npm.elemecdn.com/@waline/emojis@1.1.0/bilibili/bb_heart_eyes.png",
+                "https://npm.elemecdn.com/@waline/emojis@1.1.0/bilibili/bb_thumbsup.png",
+                "https://npm.elemecdn.com/@waline/emojis@1.1.0/bilibili/bb_zhoumei.png",
+                "https://npm.elemecdn.com/@waline/emojis@1.1.0/bilibili/bb_grievance.png",
+                "https://npm.elemecdn.com/@waline/emojis@1.1.0/bilibili/bb_dizzy_face.png",
+                "https://npm.elemecdn.com/@waline/emojis@1.1.0/bilibili/bb_slap.png",
+            ],
+
+            // 自定义语言
+            locale: {
+                placeholder: "请留言。(填写邮箱可在被回复时收到邮件提醒)",
+                reaction0: "非常有用",
+                reaction1: "有帮助",
+                reaction2: "一般",
+                reaction3: "无帮助",
+                reaction4: "看不懂",
+                reaction5: "有错误",
+                reactionTitle: "本站内容对你有帮助吗？",
+                sofa: "还没有人留言哦！快来抢沙发吧~",
+                comment: "留言",
+            },
+
+            // 自定义表情包
+            emoji: [
+                'https://gh-proxy.com/https://github.com/norevi/waline-blobcatemojis/tree/main/blobs',
+                "https://gh-proxy.com/https://github.com/walinejs/emojis/tree/main/bmoji",
+                "https://gh-proxy.com/https://github.com/walinejs/emojis/tree/main/bilibili",
+                "https://gh-proxy.com/https://github.com/walinejs/emojis/tree/main/weibo",
+                'https://gh-proxy.com/https://github.com/walinejs/emojis/tree/main/qq',
+                'https://gh-proxy.com/https://github.com/walinejs/emojis/tree/main/tieba',
+                'https://gh-proxy.com/https://github.com/walinejs/emojis/tree/main/alus'
+            ],
+
+            // 功能开关
+            imageUploader: false, // 禁用图片上传
+            search: false, // 禁用 GIF 搜索
+
+            // 其他配置
+            // wordLimit: 1024, // 评论字数限制
+            // comment: true, // 文章评论数统计
+            // pageview: true, // 文章浏览量统计
+        });
+    });
+    </script>
 </body>
 </html>
