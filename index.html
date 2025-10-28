@@ -47,6 +47,19 @@
       }
       .logo h1{margin-top: 0px; margin-bottom: 0px}
     }
+    /* 默认情况下，在小屏幕上左右留出一些边距 */
+    #waline {
+      padding: 0 15px; /* 上下0，左右15px的内边距 */
+    }
+
+    /* 当屏幕宽度大于等于 768px (平板或桌面) 时，应用最大宽度和居中 */
+    @media (min-width: 768px) {
+      #waline {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0; /* 在大屏幕上移除左右内边距，因为已经居中了 */
+      }
+    }
     </style>
 </head>
 <body class="page-body">
@@ -171,11 +184,10 @@
                         </div>
                     </div>
                 </div>
-                <div id="waline" data-path="/link" class="col-sm-5"></div>
             </div>
             <br />
             <!--END 个人博客 -->
-
+            <div id="waline" data-path="/link"></div>
             
             <!-- Main Footer -->
             <!-- Choose between footer styles: "footer-type-1" or "footer-type-2" -->
