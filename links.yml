@@ -32,7 +32,7 @@ link_exchange_url: https://gh-proxy.com
 ################
 categories:
 
-  - category: 个人博客
+  - category: 友情链接
     icon: linecons-doc
     links:
       - title: GitHub加速
