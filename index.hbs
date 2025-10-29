@@ -65,23 +65,34 @@
       }
       .logo h1{margin-top: 0px; margin-bottom: 0px}
     }
-    /* 默认情况下，在小屏幕上左右留出一些边距 */
-    #waline {
-      padding: 0 5px; /* 上下0，左右15px的内边距 */
-    }
-
-    /* 当屏幕宽度大于等于 768px (平板或桌面) 时，应用最大宽度和居中 */
-    @media (min-width: 768px) {
-      #waline {
-        max-width: 1024px;
-        margin: 0 auto;
-        padding: 0; /* 在大屏幕上移除左右内边距，因为已经居中了 */
-      }
-    }
-    :root {
-      /* 重置 Waline 内部的基础字体大小，防止被外部样式影响 */
-      --waline-font-size: 16px; 
-    }
+#waline {
+  all: revert; /* 核心！撤销所有继承和应用的样式，恢复到浏览器默认 */
+  /* 恢复 div 的基本属性 */
+  display: block;
+  box-sizing: border-box;
+  /* 默认情况下，在小屏幕上左右留出 5px 边距 (您的代码) */
+  padding: 0 5px;
+}
+/* 
+ * 步骤 2: 为大屏幕应用桌面端布局
+ * - 当屏幕宽度大于等于 768px 时，这些样式会生效。
+ */
+@media (min-width: 768px) {
+  #waline {
+    max-width: 1024px; /* 设置最大宽度 (您的代码) */
+    margin: 0 auto;      /* 使其水平居中 (您的代码) */
+    padding: 0;          /* 移除左右内边距，因为已经居中了 (您的代码) */
+  }
+}
+/* 
+ * 步骤 3: 通过官方 CSS 变量精确控制 Waline 内部样式
+ * - 这一步确保 Waline 内部组件（输入框、按钮、文本等）不受影响。
+ * - 这是解决“字体大小被全局 CSS 影响”问题的关键。
+ */
+:root {
+  /* 基础字体设置 */
+  --waline-font-size: 16px; /* 强制 Waline 内部基础字号为 16px */
+}
     </style>
 </head>
 <body class="page-body">
