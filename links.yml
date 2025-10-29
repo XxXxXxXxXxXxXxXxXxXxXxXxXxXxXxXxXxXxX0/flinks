@@ -40,15 +40,13 @@ categories:
         url: https://gh-proxy.com/
         description: GitHub 文件加速代理服务，支持 Releases、Raw、Archive 等资源下载加速，解决 GitHub 文件访问慢的问题。
         tags: GitHub代理, GitHub加速
-      - title: 等你来加➕
-        logo: data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="0.9em" x="0.1em" font-size="90">G</text></svg>
-        url: https://github.com/geneasy/links/issues
-        description: 快来交换友情链接吧
-      - title: 等你来加➕
-        logo: data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="0.9em" x="0.1em" font-size="90">G</text></svg>
-        url: https://github.com/geneasy/links/issues
-        description: 快来交换友情链接吧
-      - title: 等你来加➕
-        logo: data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="0.9em" x="0.1em" font-size="90">G</text></svg>
-        url: https://github.com/geneasy/links/issues
-        description: 快来交换友情链接吧
+      - title: Secbit Platform
+        logo: https://secbit.ai/zh-tw/favicon.ico
+        url: https://secbit.ai/zh-tw/?utm_source=gh-proxycom
+        description: 全球領先的DDoS防禦解決方案供應商
+        tags: SCDN,DDoS攻擊防禦
+      - title: Sharon CDN
+        logo: https://cdn.sharon.io/templates/lagom2/assets/img/favicons/favicon-64.png
+        url: https://cdn.sharon.io/?utm_source=gh-proxycom&language=chinese
+        description: 亚太优化 CDN 解决方案，99.9%可用性保障，免费 SSL 安全防护，一键加速配置。
+        tags: 亚太地区至中国大陆三网优化
