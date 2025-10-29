@@ -78,6 +78,10 @@
         padding: 0; /* 在大屏幕上移除左右内边距，因为已经居中了 */
       }
     }
+    :root {
+      /* 重置 Waline 内部的基础字体大小，防止被外部样式影响 */
+      --waline-font-size: 16px; 
+    }
     </style>
 </head>
 <body class="page-body">
